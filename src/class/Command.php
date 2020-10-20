@@ -1,7 +1,5 @@
 <?php
 
-use Product;
-
 class Command
 {
     private $product;
@@ -23,13 +21,13 @@ class Command
         return $this->quantity;
     }
 
-    public function setProduct(Product $product): void
+    public function addQuantity(int $quantity): void
     {
-        $this->product = $product;
+        $this->quantity += $quantity;
     }
 
-    public function setQuantity(int $quantity): void
+    public function getTotalPrice(): float
     {
-        $this->quantity = $quantity;
+        return $this->product->getPrice() * $this->quantity;
     }
 }

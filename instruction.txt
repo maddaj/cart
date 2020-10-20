@@ -1,0 +1,14 @@
+Produit : Nom, Prix 
+
+2 pages : 
+    page 1 : 
+        - Affiche la liste des produits
+        - Posséde un formulaire pour ajouter des produits dans le panier : quantité / bouton submit 
+    page 2 : 
+        - Affiche le contenu du panier avec pour chaque produit : prix unitaire, quantité , nom
+        - Affiche le prix total du panier HT
+        - Affiche le prix total du panier TTC avec une TVA de 20% sur la totalité du panier
+    
+Le panier doit etre stocké en session
+
+Une interface doit permettre a la classe Cart de changer le systeme de stockage 
