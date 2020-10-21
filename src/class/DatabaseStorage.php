@@ -11,11 +11,11 @@ class DatabaseStorage implements IStorage
 
     public function connect(): void
     {
-        $db_user = "root";
-        $db_passwd = "root";
+        $db_user = "****";
+        $db_passwd = "****";
         $db_host = "localhost";
-        $db_port = "8889";
-        $db_name = "cart";
+        $db_port = "****";
+        $db_name = "****";
 
         $this->pdo = new PDO("mysql:host=$db_host;port=$db_port;dbname=$db_name", $db_user, $db_passwd);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -44,8 +44,11 @@ class DatabaseStorage implements IStorage
         $result = $response->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($result as $row) {
+            // On recréer un produit
             $product = new Product($row['name'], $row['price']);
+            // On recréer une commande qui utilise le produit en ajoutant la quantité
             $command = new Command($product, $row['quantity']);
+            // On recréer un tableau associatif (clé/valeur) en le "rangeant" par nom de produit
             $commands[$product->getName()] = $command;
         }
         return $commands;
