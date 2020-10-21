@@ -7,7 +7,7 @@ class Cart
 
     public function __construct()
     {
-        $this->sessionStorage = new SessionStorage();
+        $this->sessionStorage = new DatabaseStorage();
 
         if (empty($this->sessionStorage->loadCommands()) == false) {
             $this->commands = $this->sessionStorage->loadCommands();

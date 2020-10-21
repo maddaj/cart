@@ -18,7 +18,7 @@ class ProductList
 
         foreach ($this->products as $index => $product) {
             echo "<li> 
-				{$product->getName()} {$product->getPrice()} 
+				{$product->getName()} {$product->getPrice()} € 
 
 				<form action='' method='POST'>
 					<label for='quantity'> Quantité </label>

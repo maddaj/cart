@@ -4,7 +4,7 @@ interface IStorage
 {
     function connect(): void;
 
-    function saveCommands(Command $command): void;
+    function saveCommands(array $command): void;
 
     function loadCommands(): array;
 }

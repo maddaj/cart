@@ -4,14 +4,15 @@ class SessionStorage implements IStorage
 {
     public function __construct()
     {
-        session_start();
+        $this->connect();
     }
 
     public function connect(): void
     {
+        session_start();
     }
 
-    public function saveCommands(Command $commands): void
+    public function saveCommands(array $commands): void
     {
         $_SESSION['cart'] = $commands;
     }

@@ -9,6 +9,7 @@ Produit : Nom, Prix
         - Affiche le prix total du panier HT
         - Affiche le prix total du panier TTC avec une TVA de 20% sur la totalité du panier
     
-Le panier doit etre stocké en session
+    
+! Important :
 
-Une interface doit permettre a la classe Cart de changer le systeme de stockage 
+Le panier doit etre stocké en session mais une interface doit permettre a la classe Cart de changer le systeme de stockage 
